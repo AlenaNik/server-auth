@@ -39,11 +39,6 @@ app.get('/', (req, res)=> {
 })
 
 app.post('/signin', (req, res) => {
-    // here you can test hashes and passwords
-bcrypt.compare("bacon", hash, function(err, res) {
-});
-bcrypt.compare("veggies", hash, function(err, res) {
-});
 
     if (req.body.email === database.users[0].email && req.body.password === database.users[0].password) {
         res.json('success');
